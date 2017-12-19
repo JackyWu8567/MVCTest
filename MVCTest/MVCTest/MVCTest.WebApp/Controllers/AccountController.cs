@@ -11,6 +11,7 @@ using Microsoft.Owin.Security;
 using MVCTest.WebApp.Models;
 using System.Collections.Generic;
 using MVCTest.IRepository;
+using MVCTest.DataModel;
 
 namespace MVCTest.WebApp.Controllers
 {
@@ -54,9 +55,10 @@ namespace MVCTest.WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (userRepository.VerifyUser(model.UserName, model.Password))
+                var roles = new List<string>();
+                if (userRepository.VerifyUser(model.UserName, model.Password,ref roles))
                 {
-                    this.SignInUser(model.UserName, false);
+                    this.SignInUser(model.UserName, roles, false);
                     this.RedirectToLocal(returnUrl);
                 }
             }
@@ -74,17 +76,21 @@ namespace MVCTest.WebApp.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        private void SignInUser(string userName, bool isPersistent)
+        private void SignInUser(string name, List<string> roles, bool isPersistent)
         {
             try
             {
                 var claims = new List<Claim>();
-                claims.Add(new Claim(ClaimTypes.Name, userName));
-                var claimIndentites = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
+                claims.Add(new Claim(ClaimTypes.Name, name));
+                foreach (var role in roles)
+                {
+                    claims.Add(new Claim(ClaimTypes.Role, role));
+                }
+                var claimsIndentity = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
                 var owinContext = Request.GetOwinContext();
-                var authenticationManager = owinContext.Authentication;
 
-                authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = isPersistent }, claimIndentites);
+                var authenticationManager = owinContext.Authentication;
+                authenticationManager.SignIn(new AuthenticationProperties { IsPersistent = isPersistent }, claimsIndentity);
             }
             catch (Exception e)
             {

@@ -5,7 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="05e157f7ea0e4cbd99b798a8c9c223a1" Name="Diagram1">
-        <EntityTypeShape EntityType="MVCTestModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTestModel.Role" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="MVCTestModel.User" Width="1.5" PointX="0.75" PointY="4" />
+        <EntityTypeShape EntityType="MVCTestModel.UserRole" Width="1.5" PointX="3" PointY="0.875" />
+        <AssociationConnector Association="MVCTestModel.FK_UserRole_Role" />
+        <AssociationConnector Association="MVCTestModel.FK_UserRole_User" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

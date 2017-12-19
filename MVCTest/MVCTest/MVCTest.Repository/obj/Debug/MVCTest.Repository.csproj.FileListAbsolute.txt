@@ -1,0 +1,14 @@
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\bin\Debug\MVCTest.Repository.dll.config
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\bin\Debug\MVCTest.Repository.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\bin\Debug\MVCTest.Repository.pdb
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\bin\Debug\EntityFramework.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\bin\Debug\MVCTest.DataModel.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\bin\Debug\MVCTest.IRepository.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\bin\Debug\MVCTest.DataModel.pdb
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\bin\Debug\MVCTest.IRepository.pdb
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\bin\Debug\EntityFramework.xml
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\obj\Debug\MVCTest.Repository.csprojResolveAssemblyReference.cache
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\obj\Debug\MVCTest.Repository.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.Repository\obj\Debug\MVCTest.Repository.pdb

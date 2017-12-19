@@ -8,6 +8,6 @@ namespace MVCTest.IRepository
 {
     public interface IUserRepository
     {
-        bool VerifyUser(string userName, string password);
+        bool VerifyUser(string userName, string password, ref List<string> roles);
     }
 }

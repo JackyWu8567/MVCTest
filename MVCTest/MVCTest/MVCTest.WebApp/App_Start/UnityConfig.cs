@@ -1,3 +1,4 @@
+using MVCTest.DataModel;
 using MVCTest.IRepository;
 using MVCTest.Repository;
 using System;

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTest.IRepository", "MVCT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTest.WebApi", "MVCTest.WebApi\MVCTest.WebApi.csproj", "{0831F63A-4C0D-4E9F-9515-8DC873228C64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTest.WebApi.Client", "MVCTest.WebApi.Client\MVCTest.WebApi.Client.csproj", "{491BBF08-7609-4083-9BD1-0C8A643E5E0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0831F63A-4C0D-4E9F-9515-8DC873228C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0831F63A-4C0D-4E9F-9515-8DC873228C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0831F63A-4C0D-4E9F-9515-8DC873228C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{491BBF08-7609-4083-9BD1-0C8A643E5E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{491BBF08-7609-4083-9BD1-0C8A643E5E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{491BBF08-7609-4083-9BD1-0C8A643E5E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{491BBF08-7609-4083-9BD1-0C8A643E5E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

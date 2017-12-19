@@ -10,7 +10,7 @@ namespace MVCTest.Repository
 {
     public class UserRepository : IUserRepository
     {
-        public bool VerifyUser(string userName, string password)
+        public bool VerifyUser(string userName, string password, ref List<string> roles)
         {
             try
             {
@@ -19,12 +19,16 @@ namespace MVCTest.Repository
                     var user = dbContext.Users.SingleOrDefault(u => u.name.Equals(userName) && u.password.Equals(password));
                     if (user != null)
                     {
+                        foreach (var role in user.UserRoles)
+                        {
+                            roles.Add(role.Role.name);
+                        }
                         return true;
                     }
                 }
                 return false;
             }
-            catch(Exception e)
+            catch
             {
                 return false;                
             }            

@@ -20,7 +20,7 @@ namespace MVCTest.WebApp.Controllers
             return View();
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin, Manager")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
