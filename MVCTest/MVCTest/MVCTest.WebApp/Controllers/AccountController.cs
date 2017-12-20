@@ -12,6 +12,7 @@ using MVCTest.WebApp.Models;
 using System.Collections.Generic;
 using MVCTest.IRepository;
 using MVCTest.DataModel;
+using MVCTest.WebApi.Client;
 
 namespace MVCTest.WebApp.Controllers
 {
@@ -58,6 +59,8 @@ namespace MVCTest.WebApp.Controllers
                 var roles = new List<string>();
                 if (userRepository.VerifyUser(model.UserName, model.Password,ref roles))
                 {
+                    AuthClient.SignIn(model.UserName, model.Password);
+
                     this.SignInUser(model.UserName, roles, false);
                     this.RedirectToLocal(returnUrl);
                 }

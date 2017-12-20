@@ -293,6 +293,10 @@
       <Project>{97188eeb-1f8b-4b3b-848a-88c3433989e8}</Project>
       <Name>MVCTest.Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MVCTest.WebApi.Client\MVCTest.WebApi.Client.csproj">
+      <Project>{491bbf08-7609-4083-9bd1-0c8a643e5e0b}</Project>
+      <Name>MVCTest.WebApi.Client</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

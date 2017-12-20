@@ -2,4 +2,3 @@ D:\MVCTest\MVCTest\MVCTest\MVCTest.IRepository\bin\Debug\MVCTest.IRepository.dll
 D:\MVCTest\MVCTest\MVCTest\MVCTest.IRepository\bin\Debug\MVCTest.IRepository.pdb
 D:\MVCTest\MVCTest\MVCTest\MVCTest.IRepository\obj\Debug\MVCTest.IRepository.dll
 D:\MVCTest\MVCTest\MVCTest\MVCTest.IRepository\obj\Debug\MVCTest.IRepository.pdb
-D:\MVCTest\MVCTest\MVCTest\MVCTest.IRepository\obj\Debug\MVCTest.IRepository.csprojResolveAssemblyReference.cache

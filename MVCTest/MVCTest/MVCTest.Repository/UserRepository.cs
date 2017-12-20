@@ -28,7 +28,7 @@ namespace MVCTest.Repository
                 }
                 return false;
             }
-            catch
+            catch(Exception e)
             {
                 return false;                
             }            

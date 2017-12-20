@@ -10,6 +10,8 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using MVCTest.WebApi.Models;
+using MVCTest.IRepository;
+using MVCTest.Repository;
 
 namespace MVCTest.WebApi.Providers
 {
@@ -29,25 +31,22 @@ namespace MVCTest.WebApi.Providers
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
-            //var userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
+            var roles = new List<string>();
+            IUserRepository repository = new UserRepository();
 
-            //ApplicationUser user = await userManager.FindAsync(context.UserName, context.Password);
+            if (repository.VerifyUser(context.UserName, context.Password, ref roles))
+            {
+                var claims = new List<Claim>();
+                claims.Add(new Claim(ClaimTypes.Name, context.UserName));
+                foreach (var role in roles)
+                {
+                    claims.Add(new Claim(ClaimTypes.Role, role));
+                }
 
-            //if (user == null)
-            //{
-            //    context.SetError("invalid_grant", "The user name or password is incorrect.");
-            //    return;
-            //}
+                var claimsIdentity = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
 
-            //ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(userManager,
-            //   OAuthDefaults.AuthenticationType);
-            //ClaimsIdentity cookiesIdentity = await user.GenerateUserIdentityAsync(userManager,
-            //    CookieAuthenticationDefaults.AuthenticationType);
-
-            //AuthenticationProperties properties = CreateProperties(user.UserName);
-            //AuthenticationTicket ticket = new AuthenticationTicket(oAuthIdentity, properties);
-            //context.Validated(ticket);
-            //context.Request.Context.Authentication.SignIn(cookiesIdentity);
+                context.Validated(claimsIdentity);                
+            }
         }
 
         public override Task TokenEndpoint(OAuthTokenEndpointContext context)

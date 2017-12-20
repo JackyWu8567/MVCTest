@@ -1,0 +1,7 @@
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi.Client\bin\Debug\MVCTest.WebApi.Client.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi.Client\bin\Debug\MVCTest.WebApi.Client.pdb
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi.Client\bin\Debug\Newtonsoft.Json.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi.Client\bin\Debug\Newtonsoft.Json.xml
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi.Client\obj\Debug\MVCTest.WebApi.Client.csprojResolveAssemblyReference.cache
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi.Client\obj\Debug\MVCTest.WebApi.Client.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi.Client\obj\Debug\MVCTest.WebApi.Client.pdb

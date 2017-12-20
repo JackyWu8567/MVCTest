@@ -91,3 +91,5 @@ D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApp\bin\MVCTest.DataModel.pdb
 D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApp\obj\Debug\MVCTest.WebApp.csprojResolveAssemblyReference.cache
 D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApp\obj\Debug\MVCTest.WebApp.dll
 D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApp\obj\Debug\MVCTest.WebApp.pdb
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApp\bin\MVCTest.WebApi.Client.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApp\bin\MVCTest.WebApi.Client.pdb

@@ -88,3 +88,14 @@ D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\System.Web.Http.Owin.xml
 D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\obj\Debug\MVCTest.WebApi.dll
 D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\obj\Debug\MVCTest.WebApi.pdb
 D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\obj\Debug\MVCTest.WebApi.csprojResolveAssemblyReference.cache
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\MVCTest.IRepository.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\MVCTest.Repository.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\Unity.Abstractions.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\Unity.Container.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\Unity.Mvc.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\WebActivatorEx.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\MVCTest.DataModel.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\MVCTest.IRepository.pdb
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\MVCTest.Repository.pdb
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\Unity.Mvc.xml
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\MVCTest.DataModel.pdb
