@@ -8,19 +8,10 @@ namespace MVCTest.WebApi.Client
 {
     public class AuthResponse
     {
-        public bool Authenticated { get; private set; }
+        public bool Authenticated { get; set; }
 
-        public List<string> Roles { get; private set; }
+        public List<string> Roles { get; set; }
 
-        public BearerToken Token { get; private set; }
-    }
-
-    public class BearerToken
-    {
-        public string AccessToken { get; private set; }
-
-        public DateTime Issued { get; private set; }
-
-        public DateTime Expired { get; private set; }
+        public string BearerToken { get; set; }
     }
 }

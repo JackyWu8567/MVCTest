@@ -43,7 +43,7 @@ namespace MVCTest.WebApi
             // container.LoadConfiguration();
 
             // TODO: Register your type's mappings here.
-            container.RegisterType<IUserRepository, UserRepository>();
+            //container.RegisterType<IUserRepository, UserRepository>();
         }
     }
 }

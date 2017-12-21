@@ -45,7 +45,11 @@ namespace MVCTest.WebApi.Providers
 
                 var claimsIdentity = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
 
-                context.Validated(claimsIdentity);                
+                var authenticationProperties = CreateProperties(context.UserName, roles);
+
+                var ticket = new AuthenticationTicket(claimsIdentity, authenticationProperties);
+
+                context.Validated(ticket);
             }
         }
 
@@ -85,11 +89,12 @@ namespace MVCTest.WebApi.Providers
             return Task.FromResult<object>(null);
         }
 
-        public static AuthenticationProperties CreateProperties(string userName)
+        public static AuthenticationProperties CreateProperties(string userName, List<string> roles)
         {
             IDictionary<string, string> data = new Dictionary<string, string>
             {
-                { "userName", userName }
+                { "userName", userName },
+                { "roles", string.Join(",", roles)}
             };
             return new AuthenticationProperties(data);
         }

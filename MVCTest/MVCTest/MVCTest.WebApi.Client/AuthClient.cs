@@ -19,7 +19,7 @@ namespace MVCTest.WebApi.Client
             }
         }
 
-        public static void SignIn(string name, string password)
+        public static AuthResponse SignIn(string name, string password)
         {
             using (var client = new HttpClient())
             {
@@ -31,10 +31,28 @@ namespace MVCTest.WebApi.Client
                                 new KeyValuePair<string, string>("username", name),
                                 new KeyValuePair<string, string>("password", password)
                             })).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = response.Content.ReadAsStringAsync().Result;
+                    var jsonObj = JsonConvert.DeserializeObject<dynamic>(content);
 
-                var content = response.Content.ReadAsStringAsync().Result;
-                var jsonObj = JsonConvert.DeserializeObject<dynamic>(content);
+                    var authResponse = new AuthResponse
+                    {
+                        Roles = new List<string>(),
+                        Authenticated = true,
+                        BearerToken = jsonObj.access_token
+                    };
 
+                    foreach (var role in jsonObj.roles.Value.Split(','))
+                    {
+                        authResponse.Roles.Add(role);
+                    }
+                    return authResponse;
+                }
+                else
+                {
+                    return new AuthResponse { Authenticated = false };
+                }
             }
         }
     }

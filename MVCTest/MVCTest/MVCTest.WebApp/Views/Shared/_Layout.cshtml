@@ -7,6 +7,15 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <script type="text/javascript">
+        @if(Request.IsAuthenticated){
+            @:if(sessionStorage.getItem("access_token")==null) {
+                @:window.sessionStorage.setItem("access_token", "@TempData["access_token"]")
+                @:alert("@TempData["access_token"]")
+            @:}
+
+        }
+    </script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">

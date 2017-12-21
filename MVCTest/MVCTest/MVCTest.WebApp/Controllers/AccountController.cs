@@ -54,15 +54,23 @@ namespace MVCTest.WebApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginViewModel model, string returnUrl)
         {
+            
             if (ModelState.IsValid)
             {
                 var roles = new List<string>();
-                if (userRepository.VerifyUser(model.UserName, model.Password,ref roles))
-                {
-                    AuthClient.SignIn(model.UserName, model.Password);
+                var response = AuthClient.SignIn(model.UserName, model.Password);
 
-                    this.SignInUser(model.UserName, roles, false);
-                    this.RedirectToLocal(returnUrl);
+                if (response != null && response.Authenticated)
+                {
+                    TempData["access_token"]= response.BearerToken;
+
+                    SignInUser(model.UserName, response.Roles, false);
+
+                    if (returnUrl != null)
+                    {
+                        return RedirectToLocal(returnUrl);
+                    }
+                    return RedirectToAction("Index", "Home");
                 }
             }
             return View(model);
