@@ -99,3 +99,6 @@ D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\MVCTest.DataModel.pdb
 D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\obj\Debug\MVCTest.WebApi.csprojResolveAssemblyReference.cache
 D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\obj\Debug\MVCTest.WebApi.dll
 D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\obj\Debug\MVCTest.WebApi.pdb
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\System.Web.Cors.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\System.Web.Http.Cors.dll
+D:\MVCTest\MVCTest\MVCTest\MVCTest.WebApi\bin\System.Web.Http.Cors.xml

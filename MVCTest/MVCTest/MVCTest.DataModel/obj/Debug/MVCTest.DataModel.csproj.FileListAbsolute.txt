@@ -5,5 +5,6 @@ D:\MVCTest\MVCTest\MVCTest\MVCTest.DataModel\bin\Debug\EntityFramework.dll
 D:\MVCTest\MVCTest\MVCTest\MVCTest.DataModel\bin\Debug\EntityFramework.SqlServer.dll
 D:\MVCTest\MVCTest\MVCTest\MVCTest.DataModel\bin\Debug\EntityFramework.xml
 D:\MVCTest\MVCTest\MVCTest\MVCTest.DataModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\MVCTest\MVCTest\MVCTest\MVCTest.DataModel\obj\Debug\MVCTest.DataModel.csprojResolveAssemblyReference.cache
 D:\MVCTest\MVCTest\MVCTest\MVCTest.DataModel\obj\Debug\MVCTest.DataModel.dll
 D:\MVCTest\MVCTest\MVCTest\MVCTest.DataModel\obj\Debug\MVCTest.DataModel.pdb

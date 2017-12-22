@@ -9,9 +9,8 @@
 
     <script type="text/javascript">
         @if(Request.IsAuthenticated){
-            @:if(sessionStorage.getItem("access_token")==null) {
+            @:if(sessionStorage.getItem("access_token") == null) {
                 @:window.sessionStorage.setItem("access_token", "@TempData["access_token"]")
-                @:alert("@TempData["access_token"]")
             @:}
 
         }

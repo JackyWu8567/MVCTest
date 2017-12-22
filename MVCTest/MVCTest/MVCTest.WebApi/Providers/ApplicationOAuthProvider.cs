@@ -31,6 +31,8 @@ namespace MVCTest.WebApi.Providers
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
+            context.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+
             var roles = new List<string>();
             IUserRepository repository = new UserRepository();
 
